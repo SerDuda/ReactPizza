@@ -1,0 +1,41 @@
+.root {
+    // класс previous кастомный. мы его не писали(он был уже привязан к нашей компоненте которую мы заимпортили с react-pagination).
+    // и дабы к нему обратиться к нему мы используем :global
+
+    // :global {
+    //     .previous {
+    //         background-color: red;
+    //     }
+    // }
+
+    li {
+        display: inline-block;
+
+        a {
+            text-align: center;
+            border: 1px solid #fe5f1e;
+            border-radius: 30px;
+            width: 45px;
+            height: 45px;
+            line-height: 42px;
+            margin-right: 10px;
+            cursor: pointer;
+            display: inline-block;
+
+            &:hover {
+                background-color: #fe5f1e;
+                color: #fff;
+            }
+        }
+
+    }
+
+    :global {
+        .selected {
+            a {
+                background-color: #fe5f1e;
+                color: #fff;
+            }
+        }
+    }
+}
